@@ -1,0 +1,70 @@
+<h1>ADD EMPLOYEE</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td><input type="text" [(ngModel)]="empId" /></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" [(ngModel)]="empName"/></td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td><input type="text" [(ngModel)]="empSalary"/></td>
+    </tr>
+    <tr>
+        <td>Department</td>
+        <td><input type="text" [(ngModel)]="empDep"/></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Add Employee" (click)="addEmployee()" /></td>
+    </tr>
+</table>
+
+<h1>Show All Employee</h1>
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let data of empAll;let i=index">
+        <td>{{data.empId}}</td>
+        <td>{{data.empName}}</td>
+        <td>{{data.empSalary}}</td>
+        <td>{{data.empDep}}</td>
+        <td><input type="button" value="UPDATE" (click)="updateEmployee(i)" /></td>
+        <td><input type="button" value="DELETE" (click)="deleteEmployee(i)" /></td>
+
+    </tr>
+</table>
+
+<h1>Update Employee</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td><input type="text" [(ngModel)]="emId" /></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" [(ngModel)]="emName"/></td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td><input type="text" [(ngModel)]="emSalary"/></td>
+    </tr>
+    <tr>
+        <td>Department</td>
+        <td><input type="text" [(ngModel)]="emDep"/></td>
+    </tr>
+
+    <tr>
+        <td><input type="button" value="Update Employee" (click)="updatevalue()" /></td>
+    </tr>
+</table>
+
+
+
+
